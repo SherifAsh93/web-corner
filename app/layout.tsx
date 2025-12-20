@@ -1,11 +1,14 @@
-// app/layout.tsx
 import type { Metadata } from "next";
+import { Cairo, Inter } from "next/font/google";
 import "./globals.css";
 
+const cairo = Cairo({ subsets: ["arabic"], weight: ["400", "700", "900"] });
+const inter = Inter({ subsets: ["latin"] });
+
 export const metadata: Metadata = {
-  title: "Web Corner | Custom Web Apps by Sherif",
+  title: "ويب كورنر | حلول برمجية مخصصة - شريف",
   description:
-    "High-performance web development studio based in Damietta, Egypt. Specialized in business and medical solutions.",
+    "استوديو تطوير تطبيقات ويب في دمياط، مصر. متخصصون في حلول العيادات والشركات.",
 };
 
 export default function RootLayout({
@@ -14,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="antialiased selection:bg-blue-100">{children}</body>
+    <html lang="ar">
+      <body className={`${cairo.className} antialiased selection:bg-blue-100`}>
+        {children}
+      </body>
     </html>
   );
 }

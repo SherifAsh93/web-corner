@@ -1,69 +1,57 @@
-"use client"; // This allows us to use 'useState' for a better user experience
-
+"use client";
 import { useState } from "react";
 import { submitLead } from "@/app/actions";
 
-export default function ContactForm() {
+export default function ContactForm({ lang, t }: any) {
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false);
 
   async function handleAction(formData: FormData) {
     setLoading(true);
     const result = await submitLead(formData);
     setLoading(false);
-
-    if (result.success) {
-      setMessage("Success! Your request is in the Web Corner.");
-    } else {
-      setMessage("Something went wrong. Please try again.");
-    }
+    if (result.success) setSuccess(true);
   }
 
-  return (
-    <form
-      action={handleAction}
-      className="flex flex-col gap-4 max-w-md mx-auto p-6 bg-white rounded-xl shadow-md"
-    >
-      <h2 className="text-xl font-bold">Start a Project</h2>
+  if (success)
+    return <p className="text-blue-600 font-bold text-xl">{t.success}</p>;
 
+  return (
+    <form action={handleAction} className="flex flex-col gap-4 text-right">
       <input
         name="name"
-        placeholder="Name"
+        placeholder={t.name}
         required
-        className="border p-2 rounded"
+        className="border-2 border-slate-100 p-4 rounded-2xl outline-blue-600"
       />
       <input
         name="email"
         type="email"
-        placeholder="Email"
+        placeholder={t.email}
         required
-        className="border p-2 rounded"
+        className="border-2 border-slate-100 p-4 rounded-2xl outline-blue-600"
       />
-
-      <select name="projectType" className="border p-2 rounded">
-        <option value="Website">Website</option>
-        <option value="Web App">Web App</option>
+      <select
+        name="projectType"
+        className="border-2 border-slate-100 p-4 rounded-2xl outline-blue-600 bg-white"
+      >
+        <option value="Website">موقع إلكتروني</option>
+        <option value="Web App">تطبيق ويب</option>
       </select>
-
       <textarea
         name="message"
-        placeholder="What are we building?"
+        placeholder={t.message}
         required
-        className="border p-2 rounded"
+        className="border-2 border-slate-100 p-4 rounded-2xl outline-blue-600"
         rows={4}
       />
-
       <button
         type="submit"
         disabled={loading}
-        className="bg-blue-600 text-white p-3 rounded font-bold hover:bg-blue-700 disabled:bg-blue-300"
+        className="bg-blue-600 text-white p-5 rounded-2xl font-black text-lg hover:bg-blue-700 disabled:bg-blue-300 shadow-xl shadow-blue-100 transition-all"
       >
-        {loading ? "Sending..." : "Send Request"}
+        {loading ? "..." : t.submit}
       </button>
-
-      {message && (
-        <p className="mt-2 text-center text-sm font-semibold">{message}</p>
-      )}
     </form>
   );
 }

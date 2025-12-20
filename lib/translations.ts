@@ -1,0 +1,66 @@
+export const translations = {
+  ar: {
+    dir: "rtl",
+    font: "Cairo, sans-serif",
+    nav: { portfolio: "أعمالي", contact: "ابدأ مشروعك" },
+    hero: {
+      badge: "متاح للمشاريع الجديدة",
+      location: "مقرنا في دمياط، مصر",
+      title: "الركن الرقمي لمستقبل عملك.",
+      brand: "ويب كورنر",
+      desc: "أنا شريف، في ويب كورنر نقوم ببناء تطبيقات ويب متطورة ومواقع سريعة تساعد الشركات في دمياط وخارجها على التوسع عالمياً.",
+      cta_primary: "احصل على عرض سعر",
+      cta_secondary: "شاهد أعمالي",
+    },
+    portfolio: {
+      title: "معرض أعمال ويب كورنر",
+      desc: "حلول متخصصة للعيادات والشركات الحديثة.",
+    },
+    contact: {
+      title: "هل أنت مستعد للانطلاق؟",
+      desc: "أرسل طلبك إلى ويب كورنر وسنتواصل معك فوراً.",
+      name: "الاسم",
+      email: "البريد الإلكتروني",
+      type: "نوع المشروع",
+      message: "تفاصيل المشروع",
+      submit: "إرسال الطلب",
+      success: "تم الاستلام! سنتواصل معك في أقرب وقت.",
+    },
+    footer: {
+      rights: "جميع الحقوق محفوظة ٢٠٢٥ - ويب كورنر ستوديو. دمياط، مصر.",
+      built: "تم التطوير بواسطة شريف",
+    },
+  },
+  en: {
+    dir: "ltr",
+    font: "Inter, sans-serif",
+    nav: { portfolio: "Portfolio", contact: "Start Project" },
+    hero: {
+      badge: "Available for New Projects",
+      location: "Based in Damietta, Egypt",
+      title: "The Digital Corner for Your Business.",
+      brand: "Web Corner",
+      desc: "I’m Sherif. At Web Corner, I build custom web applications and high-speed websites that help businesses in Domiat and beyond scale globally.",
+      cta_primary: "Get a Free Quote",
+      cta_secondary: "See My Work",
+    },
+    portfolio: {
+      title: "The Web Corner Portfolio",
+      desc: "Specialized solutions for clinics and modern businesses.",
+    },
+    contact: {
+      title: "Ready to Launch?",
+      desc: "Send a request to Web Corner and let's get started.",
+      name: "Name",
+      email: "Email",
+      type: "Project Type",
+      message: "Message",
+      submit: "Send Request",
+      success: "Success! We'll get back to you soon.",
+    },
+    footer: {
+      rights: "© 2025 Web Corner Studio. Damietta, Egypt.",
+      built: "Built by Sherif",
+    },
+  },
+};
