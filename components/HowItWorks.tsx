@@ -73,11 +73,6 @@ export default function HowItWorks() {
           </div>
         </div>
 
-        <div className="mt-16 text-center">
-          <a href="#start-project" className="btn-primary inline-flex items-center gap-2 px-10 py-4 text-base">
-            Start the Process →
-          </a>
-        </div>
       </div>
     </section>
   );

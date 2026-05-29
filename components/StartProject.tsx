@@ -92,14 +92,15 @@ export default function StartProject() {
     <section id="start-project" className="py-28 px-4 md:px-6 bg-white">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-14">
-          <p className="section-label justify-center mb-4">Start a Project</p>
+          <p className="section-label justify-center mb-4">I&apos;m Listening</p>
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
-            Tell Me About
+            Tell Me Your Dream,
             <br />
-            <span className="text-gradient">Your Idea</span>
+            <span className="text-gradient">I&apos;ll Build It for You.</span>
           </h2>
-          <p className="text-slate-500 text-lg">
-            Fill in the details below and I&apos;ll get back to you within 24 hours with a plan and estimate.
+          <p className="text-slate-500 text-lg max-w-xl mx-auto">
+            You don&apos;t need to know anything about code or design — just describe what you want.
+            I&apos;ll turn your vision into a real, fast, beautiful product from scratch.
           </p>
         </div>
 
@@ -191,7 +192,7 @@ export default function StartProject() {
               onChange={(e) => setMessage(e.target.value)}
               required
               rows={5}
-              placeholder="Tell me what you're building, who your audience is, what features you need, and anything else that helps me understand your vision..."
+              placeholder="Tell me your dream — what do you want to build? Who is it for? What should it do? No technical knowledge needed, just describe it and I'll handle the rest..."
               className="field w-full rounded-xl px-4 py-3 text-sm resize-none"
             />
             <div className="mt-3">
