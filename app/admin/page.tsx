@@ -25,12 +25,16 @@ function formatDate(d: Date | null) {
 }
 
 const TYPE_COLORS: Record<string, string> = {
-  ecommerce: "bg-amber-100 text-amber-700 border-amber-200",
-  fashion: "bg-pink-100 text-pink-700 border-pink-200",
-  clinic: "bg-teal-100 text-teal-700 border-teal-200",
-  "web-app": "bg-violet-100 text-violet-700 border-violet-200",
-  corporate: "bg-sky-100 text-sky-700 border-sky-200",
-  landing: "bg-emerald-100 text-emerald-700 border-emerald-200",
+  ecommerce:  "bg-amber-100 text-amber-700 border-amber-200",
+  website:    "bg-pink-100 text-pink-700 border-pink-200",
+  "web-app":  "bg-violet-100 text-violet-700 border-violet-200",
+  system:     "bg-teal-100 text-teal-700 border-teal-200",
+  landing:    "bg-emerald-100 text-emerald-700 border-emerald-200",
+  other:      "bg-slate-100 text-slate-600 border-slate-200",
+  // legacy values from old leads
+  fashion:    "bg-pink-100 text-pink-700 border-pink-200",
+  clinic:     "bg-teal-100 text-teal-700 border-teal-200",
+  corporate:  "bg-sky-100 text-sky-700 border-sky-200",
 };
 
 export default function AdminPage() {

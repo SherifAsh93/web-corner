@@ -58,9 +58,9 @@ export const projects: Project[] = [
   },
   {
     id: "zahrtelkhlig",
-    name: "Zahret Elkhaleel",
+    name: "Zahrtelkhlig",
     description:
-      "Mobile-first hijab fashion e-commerce store with categories, wishlist, checkout flow, and a complete admin panel.",
+      "Mobile-first hijab fashion store with product categories, wishlist, full checkout flow, and a complete admin panel.",
     category: "ecommerce",
     categoryLabel: "E-Commerce",
     categoryColor: "from-amber-500 to-orange-600",

@@ -7,12 +7,12 @@ import { projects } from "@/lib/data";
 import { submitInquiry } from "@/app/actions/submit-inquiry";
 
 const PROJECT_TYPES = [
-  { id: "ecommerce", label: "E-Commerce", icon: "🛍" },
-  { id: "fashion", label: "Fashion Brand", icon: "👗" },
-  { id: "clinic", label: "Clinic App", icon: "🏥" },
-  { id: "web-app", label: "Web App", icon: "⚙️" },
-  { id: "corporate", label: "Corporate", icon: "💼" },
-  { id: "landing", label: "Landing Page", icon: "🚀" },
+  { id: "ecommerce",  label: "Online Store",        icon: "🛒" },
+  { id: "website",    label: "Business Website",     icon: "🌐" },
+  { id: "web-app",    label: "Web Application",      icon: "⚙️" },
+  { id: "system",     label: "Management System",    icon: "📊" },
+  { id: "landing",    label: "Landing Page",         icon: "🚀" },
+  { id: "other",      label: "Something Else",       icon: "💡" },
 ];
 
 const BUDGET_OPTIONS = [
@@ -44,14 +44,12 @@ export default function StartProject() {
     if (t) setType(t);
   }, []);
 
-  const filteredRefs =
-    type && type !== "corporate" && type !== "landing"
-      ? projects.filter((p) => p.category === type)
-      : projects;
+  // Show all portfolio projects as inspiration — client picks freely
+  const filteredRefs = type ? projects : [];
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!name.trim() || !type || !message.trim()) return;
+    if (!name.trim() || !message.trim()) return;
     if (!phone.trim() && !email.trim()) return;
     setStatus("sending");
     await submitInquiry({ name, email, phone, projectType: type, reference, budget, message });
@@ -108,9 +106,12 @@ export default function StartProject() {
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           {/* Step 1 */}
           <div className="card rounded-2xl p-6">
-            <p className="text-xs font-extrabold uppercase tracking-widest text-violet-600 mb-4">
-              Step 1 — What type of project?
-            </p>
+            <div className="flex items-center justify-between mb-4">
+              <p className="text-xs font-extrabold uppercase tracking-widest text-violet-600">
+                Step 1 — What type of project?
+              </p>
+              <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Optional</span>
+            </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
               {PROJECT_TYPES.map((pt) => (
                 <button
@@ -253,7 +254,7 @@ export default function StartProject() {
 
           <button
             type="submit"
-            disabled={status === "sending" || !type || !name || !message || (!phone && !email)}
+            disabled={status === "sending" || !name || !message || (!phone && !email)}
             className="btn-primary flex items-center justify-center gap-2.5 py-4 text-base w-full disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
           >
             {status === "sending" ? (
