@@ -54,7 +54,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "Neon DB", "Admin Panel", "Full-Stack"],
     url: "https://furniture-studio-fs.vercel.app/",
     screenshot: "/projects/furniture-studio.png",
-    featured: false,
+    featured: true,
   },
   {
     id: "zahrtelkhlig",

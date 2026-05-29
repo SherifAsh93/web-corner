@@ -82,7 +82,7 @@ export default function AdminPage() {
             <Logo size={36} />
             <div>
               <div className="font-extrabold text-slate-900 text-lg leading-tight">
-                Web<span className="text-gradient">Corner</span>
+                Webistry<span className="text-gradient">dev</span>
               </div>
               <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Admin Panel</div>
             </div>
@@ -127,7 +127,7 @@ export default function AdminPage() {
           <div className="flex items-center gap-2.5">
             <Logo size={28} />
             <div>
-              <span className="font-extrabold text-slate-900 text-sm">Web<span className="text-gradient">Corner</span></span>
+              <span className="font-extrabold text-slate-900 text-sm">Webistry<span className="text-gradient">dev</span></span>
               <span className="ml-2 text-xs font-bold text-violet-600 bg-violet-50 border border-violet-200 px-2 py-0.5 rounded-full">Admin</span>
             </div>
           </div>

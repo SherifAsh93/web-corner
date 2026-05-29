@@ -46,15 +46,15 @@ export default function Navbar() {
         <button
           onClick={handleLogoClick}
           className="flex items-center gap-2.5 shrink-0 hover:opacity-80 transition-opacity"
-          aria-label="Web Corner home"
+          aria-label="Webistrydev home"
         >
           <Logo size={32} />
           <div className="flex flex-col -space-y-0.5">
             <span className="font-extrabold text-slate-900 text-base leading-tight tracking-tight">
-              Web<span className="text-gradient">Corner</span>
+              Webistry<span className="text-gradient">dev</span>
             </span>
             <span className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.18em]">
-              Web Developer
+              Full-Stack Developer
             </span>
           </div>
         </button>

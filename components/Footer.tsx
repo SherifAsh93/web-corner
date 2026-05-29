@@ -14,9 +14,9 @@ export default function Footer() {
               <Logo size={30} />
               <div className="flex flex-col -space-y-0.5">
                 <span className="font-extrabold text-slate-900 text-base leading-tight tracking-tight">
-                  Web<span className="text-gradient">Corner</span>
+                  Webistry<span className="text-gradient">dev</span>
                 </span>
-                <span className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.18em]">Web Developer</span>
+                <span className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.18em]">Full-Stack Developer</span>
               </div>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs">
@@ -77,7 +77,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-slate-400">© {new Date().getFullYear()} Web Corner. All rights reserved.</p>
+          <p className="text-xs text-slate-400">© {new Date().getFullYear()} Webistrydev. All rights reserved.</p>
           <p className="text-xs text-slate-300">Built with Next.js · Tailwind · Deployed on Vercel</p>
         </div>
       </div>

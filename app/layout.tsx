@@ -9,13 +9,13 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Web Corner — Full-Stack Web Developer",
+  title: "Webistrydev — Full-Stack Web Developer",
   description:
     "I build fast, elegant websites and web applications for businesses worldwide. E-commerce, brand sites, clinic apps, and custom web platforms.",
   keywords: ["web developer", "freelance", "Next.js", "React", "full-stack", "e-commerce"],
-  appleWebApp: { capable: true, statusBarStyle: "default", title: "Web Corner" },
+  appleWebApp: { capable: true, statusBarStyle: "default", title: "Webistrydev" },
   openGraph: {
-    title: "Web Corner — Full-Stack Web Developer",
+    title: "Webistrydev — Full-Stack Web Developer",
     description: "I build fast, elegant websites and web applications for businesses worldwide.",
     type: "website",
     url: "https://webistrydev.vercel.app",
